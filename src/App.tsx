@@ -1,11 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import AddProducts from "./Pages/AddProducts"
+import AllProducts from "./Pages/AllProducts"
 
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-red-700">salom</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AllProducts/>}/>
+        <Route path="/add" element={<AddProducts/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
