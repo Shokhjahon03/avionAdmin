@@ -1,6 +1,4 @@
-import { Button } from "flowbite-react"
 import { NavLink } from "react-router-dom"
-
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full h-[60px] bg-[#3c3b41] z-30">
