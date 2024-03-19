@@ -52,13 +52,13 @@ const AddProducts = () => {
       const uploadTask = uploadBytesResumable(storageRef, image);
       uploadTask.on(
         "state_changed",
-        // (snapshot) => {
-        //   const progress =(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        (snapshot) => {
+          const progress =(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           
-        // },
+        },
         () => {
-          //   setImageUploadError("Image upload failed");
-          //   setImageUploadProgess(null);
+            // setImageUploadError("Image upload failed");
+            // setImageUploadProgess(null);
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
