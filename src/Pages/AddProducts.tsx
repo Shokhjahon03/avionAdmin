@@ -19,7 +19,7 @@ const AddProducts = () => {
   let {waites,setProducts}:any=useStoreProducts()
 
   let [val,setVal]=useState<{name:string,price:string,image:string,description:string,category:string}>(
-    {name:'The Dandy Chair',price:'250',image:'',description:'A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.',category:'Homeware'}
+    {name:'',price:'',image:'',description:'',category:''}
   )
 
   let [err,setErr]=useState(true)
