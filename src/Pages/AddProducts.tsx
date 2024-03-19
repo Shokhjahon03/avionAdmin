@@ -27,6 +27,7 @@ const AddProducts = () => {
  
   const [image, setImage] = useState(null);
  
+ console.log(image);
  
  
   const [product, setProduct] = useState<{image:string | null}>({
