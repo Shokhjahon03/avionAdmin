@@ -7,7 +7,7 @@ import axios from "axios";
 
 const AllProducts = () => {
 
-  let {allProducts,getProducts,loading,v,DaleteProduct, GetIdProduct,idsProduct,EdidProduct}=useStoreProducts()
+  let {allProducts,getProducts,loading,DaleteProduct,EdidProduct}=useStoreProducts()
   let [a,setA]=useState(0)
   const [openModal, setOpenModal] = useState(false);
   let [val,setval]=useState<{id:string,name:string,price:string,image:string,description:string,category:string}>(

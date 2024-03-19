@@ -25,7 +25,7 @@ const AddProducts = () => {
   let [err,setErr]=useState(true)
  
  
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
  
  
  
@@ -39,7 +39,7 @@ const AddProducts = () => {
 
   const handleUploadImage = async (e:any) => {
     const image = e.target.files[0];
-    setImage(e.target.files[0]);
+    // setImage(e.target.files[0]);
     try {
       //   if (!image) {
       //     setImageUploadError("Please select an image");
