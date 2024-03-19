@@ -1,14 +1,14 @@
 // import { getStorage, ref } from "firebase/storage";
-import { Button, ButtonGroup, FileInput } from "flowbite-react"
-import { useEffect, useState } from "react";
+import { Button, FileInput } from "flowbite-react"
+import { useState } from "react";
 import { Label, TextInput,Textarea,Select } from 'flowbite-react';
 import {getDownloadURL,getStorage,ref,uploadBytesResumable,} from "firebase/storage";
 import { app } from '../../firebase';
 import useStoreProducts from "../App/ProductsSet";
-import React, { ChangeEvent } from 'react';
+import  { ChangeEvent } from 'react';
 
 import { Toast } from 'flowbite-react';
-import { HiCheck, HiExclamation, HiX } from 'react-icons/hi';
+import { HiCheck, HiExclamation} from 'react-icons/hi';
 import { NavLink } from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ const AddProducts = () => {
 
   let [torf,setTorf]=useState(false)
   
-  let {allProducts,waites,setProducts,getProducts}:any=useStoreProducts()
+  let {waites,setProducts}:any=useStoreProducts()
 
   let [val,setVal]=useState<{name:string,price:string,image:string,description:string,category:string}>(
     {name:'The Dandy Chair',price:'250',image:'',description:'A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.',category:'Homeware'}
@@ -52,11 +52,10 @@ const AddProducts = () => {
       const uploadTask = uploadBytesResumable(storageRef, image);
       uploadTask.on(
         "state_changed",
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          //   setImageUploadProgess(progress.toFixed(0));
-        },
+        // (snapshot) => {
+        //   const progress =(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          
+        // },
         () => {
           //   setImageUploadError("Image upload failed");
           //   setImageUploadProgess(null);
