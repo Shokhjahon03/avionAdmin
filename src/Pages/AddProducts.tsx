@@ -54,7 +54,8 @@ const AddProducts = () => {
         "state_changed",
         (snapshot) => {
           const progress =(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          
+         console.log(progress,image);
+         
         },
         () => {
             // setImageUploadError("Image upload failed");
